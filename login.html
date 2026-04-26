@@ -3,11 +3,17 @@
 <head>
   <title>Login</title>
   <link rel="stylesheet" href="/style.css">
+  <script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer
+></script>
 </head>
-<body style="background:black; color:white; text-align:center; font-family:sans-serif;">
+<body style="background:black; color:white; text-align:center; font-family:Lucida Sans Unicode, sans-serif;">
+  <form action="/login" method="POST">
   <div class="topbar">
   <div class="left">
-    <img src="https://raw.githubusercontent.com/WSCOfficial/wscofficial.github.io/main/images/favicon.png" class="logo">
+    <img src="images/favicon.png" class="logo">
     <span class="title">WSC</span>
   </div>
 
@@ -20,7 +26,7 @@
 </div>
 
 
-  <p>Powered by</p>  <img src="raw.githubusercontent.com/WSCOfficial/wscofficial.github.io/main/images/supabase-logo-wordmark--dark.png" alt="Supabase">
+  <p>Powered by</p>  <img src="images/supabase-logo-icon.png" alt="Supabase">
   
   <h1>Login</h1>
 
@@ -28,6 +34,13 @@
   <br>
   <input id="password" type="password" placeholder="Password">
   <br><br>
+<div
+  class="cf-turnstile"
+  data-sitekey="<0x4AAAAAADDpnVscbX6sJT_4>"
+  data-theme="light"
+  data-size="normal"
+  data-callback="verified"
+></div>
 
   <button id="loginBtn">Login</button>
   <button id="signupBtn">Sign Up</button>
